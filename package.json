@@ -1,0 +1,8 @@
+{
+  "name": "lowcost-flight-platform",
+  "version": "1.0.0",
+  "description": "Low-cost flight reservation platform using the Decorator design pattern",
+  "main": "backend/server.js",
+  "scripts": {"start": "node backend/server.js", "test": "node tests/decorator-test.js"},
+  "dependencies": {"cors": "^2.8.5", "express": "^4.21.2"}
+}
