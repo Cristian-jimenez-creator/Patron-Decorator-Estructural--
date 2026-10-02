@@ -1,3 +1,7 @@
+cristian alexis Jimenez
+Sebastian Granda Cordoba 
+Manuel Alejandro Villarreal
+
 # Plataforma LowCost de reservas de vuelos
 
 Proyecto académico que demuestra el patrón de diseño Decorator mediante una plataforma sencilla para seleccionar vuelos y agregar servicios opcionales.
