@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LowCost | Flight Reservation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">✈</span><div><strong>LowCost</strong><small>Fly simple. Pay only for what you need.</small></div></div>
+  <span class="online">● System online</span>
+</header>
+
+<main class="container">
+<section class="hero">
+  <span>LOW-COST RESERVATIONS</span>
+  <h1>Find your flight and customize your trip</h1>
+  <p>Choose a Basic fare and add only the services you need.</p>
+</section>
+
+<section class="layout">
+<div>
+  <h2>1. Select your flight</h2>
+  <p class="muted">All flights include the Basic fare.</p>
+  <div id="flights"></div>
+
+  <div class="card passenger">
+    <h2>2. Passenger information</h2>
+    <div class="form">
+      <label>Full name<input id="name" placeholder="e.g. John Smith"></label>
+      <label>Email address<input id="email" type="email" placeholder="email@example.com"></label>
+    </div>
+  </div>
+</div>
+
+<aside class="card summary">
+  <div class="summary-head"><div><small>CUSTOMIZE</small><h2>Your reservation</h2></div><b>BASIC</b></div>
+  <div id="selectedFlight" class="selected empty">Select a flight to continue.</div>
+
+  <h3>Additional services</h3>
+  <label class="service"><input type="checkbox" data-service="checked"><span>🧳</span><div><strong>Checked baggage</strong><small>23 kg</small></div><b>+$70,000</b></label>
+  <label class="service"><input type="checkbox" data-service="carryon"><span>🎒</span><div><strong>Carry-on baggage</strong><small>Cabin bag</small></div><b>+$40,000</b></label>
+  <label class="service"><input type="checkbox" data-service="seat"><span>💺</span><div><strong>Seat selection</strong><small>Choose your seat</small></div><b>+$25,000</b></label>
+  <label class="service"><input type="checkbox" data-service="priority"><span>⚡</span><div><strong>Priority boarding</strong><small>Board first</small></div><b>+$30,000</b></label>
+
+  <div class="prices">
+    <div><span>Basic fare</span><b id="base">$0</b></div>
+    <div><span>Services</span><b id="services">$0</b></div>
+    <div class="total"><span>Total</span><b id="total">$0</b></div>
+  </div>
+  <button id="reserve" disabled>Confirm reservation</button>
+  <small class="secure">🔒 Final price is validated by the server.</small>
+</aside>
+</section>
+
+<section id="success" class="card success hidden">
+  <div class="check">✓</div><div><small>RESERVATION CONFIRMED</small><h2 id="successTitle"></h2><p id="successDetails"></p></div>
+  <button id="new">New reservation</button>
+</section>
+
+<section class="card how">
+<h2>How the Decorator Pattern works</h2>
+<div class="flow"><span>Basic Ticket</span> → <span>+ Baggage</span> → <span>+ Carry-on</span> → <span>+ Seat</span> → <span>Final Price</span></div>
+<p>Each service wraps the previous ticket and adds its own behavior and cost without modifying the original class.</p>
+</section>
+</main>
+<footer>Academic Project · Decorator Pattern · LowCost Flight Platform</footer>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
